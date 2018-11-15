@@ -1,0 +1,35 @@
+.page_container_wrap {
+    padding: 30px;
+}
+.page_container_wrap h1, .search_wrapper h1 {
+    font-size: 1.6rem;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+.page_container_wrap .card-text{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.card-body>h5 {
+    min-height: 57px;
+}
+.card {
+    margin: 0 auto 20px;
+}
+.card-img-top {
+    width: auto;
+    min-height: 400px;
+}
+.pagination_wrapper{
+    overflow: auto;
+}
+.card-img-top.withoutImg{
+    background-image: url('../../../assets/clapperboard.png');
+    background-repeat: no-repeat;
+    max-width: 200px;
+    margin: 0 auto;
+    opacity: 0.75;
+    background-size: contain;
+}
