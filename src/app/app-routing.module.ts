@@ -10,12 +10,7 @@ const routes : Routes = [
       component: MoviesComponent
   }
 ]
-// @NgModule({
-//   imports: [
-//     CommonModule
-//   ],
-//   declarations: []
-// })
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -23,7 +23,6 @@ export class MoviesComponent implements OnInit {
   getMovies(){
     this.getMoviesService.getTopRatedMovies(this.page).subscribe(
       data=>{
-        // console.log(data);
         this.movies = data['results'];
         this.totalPages = new Array(data['total_pages']);
       },
@@ -35,12 +34,10 @@ export class MoviesComponent implements OnInit {
   //function for getting searched movies
   getSearchedMovies(movie:string){
     this.searchedMovie = movie;
-    console.log(this.searchedMovie)
     this.getMoviesService.searchMovies(movie, this.page).subscribe((res:any)=>{
       this.movies = res['results'];
         this.totalPages = new Array(res['total_pages']);
         this.isSearchUsed = true;
-        console.log(res, this.searchedMovie, this.movies.length, this.totalPages);
     },(error)=>{
         console.log(error.error.message);
       }
