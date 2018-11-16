@@ -33,3 +33,6 @@
     opacity: 0.75;
     background-size: contain;
 }
+.btn-toolbar {
+    justify-content: center;
+}

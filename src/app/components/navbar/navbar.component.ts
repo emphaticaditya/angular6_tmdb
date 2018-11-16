@@ -16,7 +16,13 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
   }
   searchMovies(){
-    return this.findMovies.getSearchedMovies(this.searchForm.value.searchInput);
+    this.findMovies.totalPages.splice(0, this.findMovies.totalPages.length);
+    if(this.searchForm.value.searchInput==""){
+      return this.findMovies.getMovies();
+    }
+    else{
+      return this.findMovies.getSearchedMovies(this.searchForm.value.searchInput);
+    }
   }
 
 }

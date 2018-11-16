@@ -26,7 +26,9 @@
   <div class="pagination_wrapper">
       <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
           <div class="btn-group mr-2" role="group" aria-label="First group">
-            <button type="button" class="btn btn-secondary" *ngFor="let p of totalPages; let i=index" (click)="changePage(i, $event)" [ngClass]="{'active':i==page-1}">{{i+1}}</button>
+            <button type="button" class="btn btn-secondary" (click)="reducePageNumber(page-2, $event, 'prev')">Prev</button>
+            <button type="button" class="btn btn-secondary" *ngFor="let p of totalPages; let i=index" (click)="changePage(p-1, $event)" [ngClass]="{'active': p==currentPage}">{{p}}</button>
+            <button type="button" class="btn btn-secondary" (click)="reducePageNumber(page, $event, 'next')">Next</button>
           </div>
       </div>
   </div>
